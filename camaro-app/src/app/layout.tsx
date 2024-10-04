@@ -4,6 +4,7 @@ import Header from './components/Header';  // Assuming you have these components
 import Footer from './components/Footer';
 import CamaroCup from './components/camaro-cup';
 import CamaroCupGrid from './components/CamGrid';
+import SponsorLogos from './components/SponserLogo';
 
 export default function RootLayout({
   children,
@@ -24,6 +25,9 @@ export default function RootLayout({
 
         {/* Camaro Cup Grid */}
         <CamaroCupGrid />
+        {/* Sponsor Logos */}
+        <SponsorLogos />
+
         {/* Footer */}
         <Footer />
       </body>
