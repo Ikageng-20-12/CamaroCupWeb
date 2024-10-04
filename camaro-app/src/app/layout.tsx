@@ -1,20 +1,28 @@
-import './styles/globals.css';
-import type { ReactNode } from 'react';
+// app/layout.tsx
+import './styles/globals.css';  // Import your global styles
+import Header from './components/Header';  // Assuming you have these components
+import Footer from './components/Footer';
+import CamaroCup from './components/camaro-cup';
 
-export const metadata = {
-  title: 'SimGrid Clone',
-  description: 'Recreating the SimGrid site with Next.js and Tailwind CSS',
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className="bg-gray-900 text-white">
-        {children}  {/* This will render the page content */}
+      <body>
+        {/* Header */}
+        <Header />
+
+        {/* Main Content */}
+        <main>{children}</main>
+
+        {/* Camaro Cup */}
+        <CamaroCup />
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
